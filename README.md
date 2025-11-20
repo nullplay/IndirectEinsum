@@ -1,5 +1,8 @@
 # IndirectEinsum
 
+In order to get the maximum performance on GPU, you will need PyTorch with native_matmul enabled.
+As of Nov 2025, it is available in PyTorch nightly. (https://pytorch.org/get-started/locally/)
+
 To run the **SpMM COO** example in `example.py`, use:
 
 ```bash
