@@ -17,6 +17,8 @@ N = 16
 out = torch.zeros((M,N))
 In = torch.rand((K,N))
 
+torch._inductor.config.triton.native_matmul = True
+
 @torch.compile
 def SpMM_COO(out, In, rows, cols, values) :
     # Note that Insum always inplace update the left hand side (out) 
