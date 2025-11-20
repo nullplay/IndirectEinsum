@@ -88,6 +88,7 @@ def group_and_pad_spmm(w, o, val,window_size):
 warnings.filterwarnings('ignore')
 torch.set_float32_matmul_precision("high")
 torch._inductor.config.triton.prefer_nd_tiling=True
+torch._inductor.config.triton.native_matmul=True
 Insum = torch.compile(Insum)
 bench = benchmarker.benchmark_gpu
 
