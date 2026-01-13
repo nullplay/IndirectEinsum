@@ -1,7 +1,6 @@
 # IndirectEinsum
 
 
-**What it does:**  
 `Insum` executes an **indirect einsum (gather–scatter tensor algebra)** using `torch.compile`, allowing index indirection (e.g. `Row[p]`, `Col[p]`) and accumulation semantics (`+=`) to be compiled into efficient kernels.
 
 **Example:**  
